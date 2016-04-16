@@ -8,7 +8,7 @@
     "port": 3306,
     "database": "hackathon",
     "username": "root",
-    "password": "ken24657021",
+    "password": "admin",
     "name": "MySQL",
     "connector": "mysql"
   }

@@ -13,6 +13,14 @@
     "nature": {
       "type": "string",
       "required": true
+    },
+    "time": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true
     }
   },
   "validations": [],

@@ -18,7 +18,8 @@ var member_array=[
   "deviceToken": "hkustfyp",
   "emailVerified": 1,
   "gender_preference": true,
-  "created": new Date()//moment().format()
+  "created": new Date(),//moment().format()
+  "picture": "01"
 },
 {
   "first_name": "sam",
@@ -32,35 +33,8 @@ var member_array=[
   "deviceToken": "fypyeah",
   "emailVerified": 1,
   "gender_preference": false,
-  "created": new Date(2016,0,27)
-},
-{
-  "first_name": "hin",
-  "last_name": "kwok",
-  "phone_number": 98989898,
-  "gender": "male",
-  "authorized": "yes",
-  "isDriver": "yes",
-  "password": "123456",
-  "email": "9g@9g.com",
-  "deviceToken": "chingwinglok",
-  "emailVerified": 1,
-  "gender_preference": true,
-  "created": new Date(2016,0,25)
-},
-{
-  "first_name": "nicole",
-  "last_name": "ho",
-  "phone_number": 89898989,
-  "gender": "female",
-  "authorized": "yes",
-  "isDriver": "yes",
-  "password": "123456",
-  "email": "dd@dd.com",
-  "deviceToken": "kong",
-  "emailVerified": 1,
-  "gender_preference": false,
-  "created": new Date(2016,1,27)
+  "created": new Date(2016,0,27),
+  "picture": "01"
 }
 ];
 
@@ -92,19 +66,19 @@ dataSource.automigrate('member', function(err) {
   console.log("Member!");
 
   var member=app.models.member;
-  // var count=member_array.length;
-  // member_array.forEach(function(Mem){
-  //   member.create(Mem,function(err,record){
-  //     if(err)
-  //       return console.log(err)
-  //     console.log("member_done",record);
-  //     count--;
-  //     if(count==0){
-  //       console.log("member_ko");
-  //     }
+  var count=member_array.length;
+  member_array.forEach(function(Mem){
+    member.create(Mem,function(err,record){
+      if(err)
+        return console.log(err)
+      console.log("member_done",record);
+      count--;
+      if(count==0){
+        console.log("member_ko");
+      }
 
-  //   })
-  // });
+    })
+  });
 
 });
 
