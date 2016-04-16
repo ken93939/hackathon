@@ -1,0 +1,28 @@
+{
+  "name": "member",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "picture": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "activities": {
+      "type": "hasMany",
+      "model": "activity",
+      "foreignKey": ""
+    },
+    "locations": {
+      "type": "hasOne",
+      "model": "location",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

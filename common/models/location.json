@@ -1,0 +1,30 @@
+{
+  "name": "location",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "location": {
+      "type": "geopoint",
+      "required": true
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "members": {
+      "type": "hasOne",
+      "model": "member",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
