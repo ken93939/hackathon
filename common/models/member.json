@@ -24,12 +24,12 @@
     }
   },
   "acls": [
-  {
-    "principalType": "ROLE",
-    "principalId": "$everyone",
-    "permission": "ALLOW",
-    "property": "getInfo"
-  }
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getInfo"
+    }
   ],
   "methods": {}
 }

@@ -43,5 +43,21 @@
   "location": {
     "dataSource": "MySQL",
     "public": true
+  },
+  "Push": {
+    "dataSource": "push",
+    "public": true
+  },
+  "application": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "installation": {
+    "public": true,
+    "dataSource": "db"
+  },
+  "notification": {
+    "public": true,
+    "dataSource": "db"
   }
 }

@@ -90,7 +90,8 @@ module.exports = function(Activity) {
 					console.log(err);
 					cb(err, null);
 				} else{
-					var obj = acts[index];
+					var obj = {};
+					obj.username = mem.username;
 					obj.picture = mem.picture;
 					newActs.push(obj);
 					Activity.getPossibleMatchedInfo(acts, index+1, newActs, cb);

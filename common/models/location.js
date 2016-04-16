@@ -5,17 +5,21 @@ var loopback=require('loopback');
 module.exports = function(Location) {
 
 	Location.addLocation = function(data, cb){
+		console.log(data);
 		var ctx=loopback.getCurrentContext();
 		// console.log(ctx);
 		var accessToken=ctx.get('accessToken');
 		// console.log(accessToken);
 		var currentUser = ctx && ctx.get('currentUser');
 
-		data.memberId = currentUser.id;
-		data.time = new Date();
-		data.active = true;
+		var locData = {};
 
-		Location.create(data, function(err, loc){
+		locData.memberId = currentUser.id;
+		locData.time = new Date();
+		locData.active = true;
+		locData.location = data;
+
+		Location.create(locData, function(err, loc){
 			if (err){
 				console.log(err);
 				cn(err, null);
